@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 
-import MainFooter from './components/footer/MainFooter.vue'
+import MainFooter from './components/sections-new/MainFooter.vue'
 import MainHeader from './components/header/MainHeader.vue'
 import '@fortawesome/fontawesome-free/css/all.css';
 </script>
