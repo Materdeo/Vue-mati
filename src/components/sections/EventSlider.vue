@@ -23,9 +23,12 @@
     </div>
     <div class="event-content">
       <h2 class="mb-25px">{{ heading }}</h2>
-      <div class="mb-5px">{{ date }}</div>
-      <div class="event-loc">
-        <i class="fa fa-map-marker"></i>
+      <div class="d-flex flex-row align-items-center mb-5px">
+        <i class="fa fa-clock mr-5px"></i>
+        <p>{{ date }}</p>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <i class="fa fa-map-marker mr-5px"></i>
         <template v-for="(loc, index) in location" :key="loc.name">
           <a class="text-gray2 hover-orange" :href="loc.href">{{ loc.name }}</a>
           <span v-if="index < location.length - 1">, </span>
@@ -72,6 +75,9 @@
     border-top: none;
     border-radius: 0 0 5px 5px;
     background: white;
+  }
+  .event-content .fa{
+    color: #888;
   }
   .event-cat:hover {
     background-color: #e86c60 !important;

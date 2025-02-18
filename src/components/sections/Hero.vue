@@ -16,7 +16,7 @@
 </script>
 
 <template>
-  <div class="section hero" :style="{ backgroundImage: `url(${source})` }">
+  <section class="hero" :style="{ backgroundImage: `url(${source})` }">
     <div class="container flex-column align-items-center">
       <h2 class="hero-title">{{ heading }}</h2>
       <p class="hero-desc">
@@ -63,7 +63,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
@@ -109,6 +109,7 @@
   }
   .hero .container {
     z-index: 1;
+    position: relative;
   }
 
   .hero-title {

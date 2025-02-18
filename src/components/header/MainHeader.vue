@@ -5,7 +5,7 @@ import DropDown from './DropDown.vue'
 <template>
     <header class="section header">
         <div class="container justify-content-between">
-            <a href="/"><img class="header-logo" src="\dist\assets\icons\logo.svg" alt=""></a>
+            <a href="/"><img class="header-logo" src="\src\assets\icons\logo.svg" alt=""></a>
             <nav class="header-nav">
                 <DropDown>
                 Tutaj będzie dropdown jak go ogarne
@@ -41,8 +41,6 @@ height: 40px;
     align-items: center;
 
 }
-
-
 
 
 </style>

@@ -36,7 +36,7 @@ defineProps({
 .cat-img{
 width: 50px;
 height: 50px;
-object-fit: cover;
+object-fit: contain;
 margin-bottom: 17px;
 }
 .cat-title{

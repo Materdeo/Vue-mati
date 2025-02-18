@@ -8,37 +8,37 @@
   const category = [
     {
       name: "Events",
-      source: "/dist/assets/images/feature_1.png",
+      source: "/src/assets/images/feature_1.png",
       count: 1,
       link: "/test",
     },
     {
       name: "Concerts",
-      source: "/dist/assets/images/feature_2.png",
+      source: "/src/assets/images/feature_2.png",
       count: 2,
       link: "/test",
     },
     {
       name: "Orgies",
-      source: "/dist/assets/images/feature_3.png",
+      source: "/src/assets/images/feature_3.png",
       count: 3,
       link: "/test",
     },
     {
       name: "Events",
-      source: "/dist/assets/images/feature_1.png",
+      source: "/src/assets/images/feature_1.png",
       count: 1,
       link: "/test",
     },
     {
       name: "Concerts",
-      source: "/dist/assets/images/feature_2.png",
+      source: "/src/assets/images/feature_2.png",
       count: 0,
       link: "/test",
     },
     {
       name: "Orgies",
-      source: "/dist/assets/images/feature_3.png",
+      source: "/src/assets/images/feature_3.png",
       count: 5,
       link: "/test",
     },
@@ -50,7 +50,7 @@
   }
   const upcoming = [
   {
-    bg: '/dist/assets/images/event-bg-1.jpg',
+    bg: '/src/assets/images/event-bg-1.jpg',
     source: '/test',
     heading: 'The Food Mood Reboot in the New Century',
     date: 'September 24, 2025',
@@ -63,7 +63,7 @@
     ]
   },
   {
-    bg: '/dist/assets/images/event-bg-2.jpg',
+    bg: '/src/assets/images/event-bg-2.jpg',
     source: '/test',
     heading: 'Rock Festival 2025',
     date: 'October 12, 2025',
@@ -76,7 +76,7 @@
     ]
   },
   {
-    bg: '/dist/assets/images/event-bg-3.jpg',
+    bg: '/src/assets/images/event-bg-3.jpg',
     source: '/test2',
     heading: 'Cum and Doom Festival',
     date: 'October 12, 2025',
@@ -92,7 +92,7 @@
   const locations = [
     {  
       id:1,
-      bg: '/dist/assets/images/event-bg-3.jpg',
+      bg: '/src/assets/images/event-bg-3.jpg',
       link: '/test',
       Ecount: 5,
       location: [
@@ -101,7 +101,7 @@
     },
     { 
       id:2,
-      bg: '/dist/assets/images/event-bg-3.jpg',
+      bg: '/src/assets/images/event-bg-3.jpg',
       link: '/test',
       Ecount: 5,
       location: [
@@ -110,7 +110,7 @@
     },
     {  
       id:1,
-      bg: '/dist/assets/images/event-bg-3.jpg',
+      bg: '/src/assets/images/event-bg-3.jpg',
       link: '/test',
       Ecount: 5,
       location: [
@@ -119,7 +119,7 @@
     },
     {  
       id:1,
-      bg: '/dist/assets/images/event-bg-3.jpg',
+      bg: '/src/assets/images/event-bg-3.jpg',
       link: '/test',
       Ecount: 5,
       location: [
@@ -128,7 +128,7 @@
     },
     {  
       id:1,
-      bg: '/dist/assets/images/event-bg-3.jpg',
+      bg: '/src/assets/images/event-bg-3.jpg',
       link: '/test',
       Ecount: 5,
       location: [
@@ -142,14 +142,14 @@
   <Hero
     heading="Connecting the world"
     desc="Easy to search, you just enter the keyword"
-    source="/dist/assets/images/bg_home1.jpg"
+    source="/src/assets/images/bg_home1.jpg"
     :link="{
     text: 'Auto racing xd',
     date: '2025-02-15',
     href: '/test'
   }"
   />  
-  <div class="section pt-30px pt-lg-90px pb-30px pb-lg-90px">
+  <section class="pt-30px pt-lg-90px pb-30px pb-lg-90px">
     <div class="container cat-holder">
       <CategoryCards
         v-for="cat in category"
@@ -161,8 +161,8 @@
         :class="'col-12 col-md-4 col-lg-2'"
       />
     </div>
-  </div>
-  <div class="section pt-80px pb-85px bg-lpurple">
+  </section>
+  <section class="pt-80px pb-85px bg-lpurple">
     <div class="container">
       <div class="d-flex flex-column col-12 mb-30px mb-lg-45px">
         <Intro heading="Upcoming Events" subheading="You can choose to display featured" class="title2"/>
@@ -175,34 +175,34 @@
       </div>
 
     </div>
-  </div>
-  <div class="section pt-80px pb-80px">
+  </section>
+  <section class="pt-80px pb-80px">
     <div class="container">
       <div class="d-flex flex-column col-12 mb-30px mb-lg-45px">
         <Intro heading="How id work" subheading="You can choose to display featured" class="title"/>
       </div>
       <Cards
         :class="'col-12 col-lg-4'"
-        source="/dist/assets/images/feature_1.png"
+        source="/src/assets/images/feature_1.png"
         heading="Choose What To Do
 "
         desc="Easily find your event via search system with multiple params."
       />
       <Cards
         :class="'col-12 col-lg-4'"
-        source="/dist/assets/images/feature_2.png"
+        source="/src/assets/images/feature_2.png"
         heading="Booking event that you like"
         desc="Choose Ticket add to cart. Support payment via Woocommerce system."
       />
       <Cards
         :class="'col-12 col-lg-4'"
-        source="/dist/assets/images/feature_3.png"
+        source="/src/assets/images/feature_3.png"
         heading="Get the ticket to attend"
         desc="After booking successfully, You will get ticket in email or download in your account"
       />
     </div>
-  </div>
-  <div class="section pt-80px pb-80px bg-lpurple">
+  </section>
+  <section class="pt-80px pb-80px bg-lpurple">
     <div class="container d-flex flex-lg-row">
       <div class="d-flex flex-column col-12 mb-30px mb-lg-45px">
         <Intro heading="Most Visited Places" subheading="You can choose to display featured" class="title2"/>
@@ -216,11 +216,6 @@
       </div>
   
     </div>
-  </div>
+  </section>
 </template>
 
-<style>
-  .test {
-    color: red;
-  }
-</style>
