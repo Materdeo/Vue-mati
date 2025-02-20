@@ -1,56 +1,32 @@
-<script>
+<script setup>
+defineProps({
+    id: Number,
+    src: String,
+    mainLink: Array, // Keep as Array if your data structure is an array
+    date: String,
+});
 </script>
 
 <template>
     <div class="event col-12">
         <div class="event-img">
-            <a class="link-stretched" href="/">
+            <a class="link-stretched" :href="mainLink[0].href">
             </a>
-            <img src="/src/assets/images/events-bg-1.jpg" alt="">
+            <img :src="src" alt="">
         </div>
 
         <div class="d-flex flex-column mr-auto">
-            <h6 class="event-title"><a class="" href="">Bang Pow Boom at Juggaloo island</a></h6>
-            <p class="event-date">December 20, 2022</p>
+            <h6 class="event-title">
+                <a :href="mainLink.href">{{ mainLink[0].title }}</a>
+            </h6>
+            <p class="event-date">{{ date }}</p>
         </div>
-        <a class="read-more">
-            Manic Depressive
+
+        <a class="read-more" :href="mainLink[0].href">
+            {{ mainLink[0].location }}
             <i class="fa fa-arrow-right"></i>
         </a>
     </div>
-    <div class="event col-12">
-        <div class="event-img">
-            <a class="link-stretched" href="/">
-            </a>
-            <img src="/src/assets/images/events-bg-1.jpg" alt="">
-        </div>
-
-        <div class="d-flex flex-column mr-auto">
-            <h6 class="event-title"><a class="" href="">Bang Pow Boom at Juggaloo island</a></h6>
-            <p class="event-date">December 20, 2022</p>
-        </div>
-        <a class="read-more">
-            Manic Depressive
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    </div>
-    <div class="event col-12">
-        <div class="event-img">
-            <a class="link-stretched" href="/">
-            </a>
-            <img src="/src/assets/images/events-bg-1.jpg" alt="">
-        </div>
-
-        <div class="d-flex flex-column mr-auto">
-            <h6 class="event-title"><a class="" href="">Bang Pow Boom at Juggaloo island</a></h6>
-            <p class="event-date">December 20, 2022</p>
-        </div>
-        <a class="read-more">
-            Manic Depressive
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    </div>
-
 </template>
 
 <style lang="scss" scoped>
@@ -84,8 +60,9 @@
         flex-shrink: 0;
         margin-bottom: 20px;
         position: relative;
+        display: flex;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             margin-right: 30px;
             margin-bottom: 0;
         }
@@ -119,12 +96,6 @@
     }
 
     &-date {
-        font-family: var(--additonal);
-        font-weight: 400;
-        color: #505558;
-        font-size: 12px;
-        line-height: 30px;
-        text-transform: uppercase;
         margin-bottom: 10px;
 
         @include media-breakpoint-up(md) {

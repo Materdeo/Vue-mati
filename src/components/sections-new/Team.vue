@@ -120,7 +120,7 @@ defineProps({
 
   &__members {
     display: grid;
-    grid-template-columns: 590px;
+    grid-template-columns: 1fr;
     justify-content: center;
     row-gap: 50px;
 

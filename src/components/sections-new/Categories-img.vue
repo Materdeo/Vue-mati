@@ -39,6 +39,7 @@
     column-gap: 30px;
     justify-content: center;
     align-items: center;
+    row-gap: 30px;
 
     @include media-breakpoint-up(md) {
         grid-template-columns: repeat(5, 1fr);
