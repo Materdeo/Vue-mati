@@ -1,5 +1,8 @@
 <script setup>
+import { ref } from 'vue';
+import Poptext from './Poptext.vue';
 
+const text = ref("Future Events");
 </script>
 
 <template>
@@ -47,7 +50,7 @@
         </div>
 
     </div>
-    <section class="pt-40px pt-lg-130px  pb-50px pb-lg-105px cta">
+    <section class="pb-50px pb-lg-105px cta">
         <div class="container container-big">
             <div class="cta-left">
                 <p class="sub-title mb-17px">
@@ -65,14 +68,13 @@
                 </a>
             </div>
             <div class="cta-right">
-
+                <Poptext :text="text" />
             </div>
         </div>
         <div class="cta-cloud">
             <img src="/src/assets/images/cta-cloud.png" alt="">
         </div>
         <div class="cta-calendar">
-            zmień nazwe
             <img src="/src/assets/images/cat-calendar.png" alt="">
         </div>
     </section>
@@ -86,23 +88,38 @@
     background-position: center right;
     background-repeat: no-repeat;
     overflow: hidden;
+    position: relative;
 
     &-left {
         display: flex;
         flex-direction: column;
+        padding-top: 30px;
+        width: 100%;
+        order: 1;
 
-        @include media-breakpoint-up(lg) {}
+        @include media-breakpoint-up(lg) {
+            padding-top: 130px;
+            width: 44%;
+            order: 0;
+        }
 
-        width: 44%;
+
     }
 
     &-right {
         display: flex;
         flex-direction: column;
+        padding-top: 80px;
+        width: 100%;
+        order: 0;
 
-        @include media-breakpoint-up(lg) {}
+        @include media-breakpoint-up(lg) {
+            width: 56%;
+            padding-top: 100px;
+            order: 1;
+        }
 
-        width: 56%;
+
     }
 
     &-scroller {
@@ -118,7 +135,7 @@
 
         span {
             text-transform: uppercase;
-            font-family: var(--addtional);
+            font-family: 'Krona one';
             font-weight: 400;
             letter-spacing: 0.16px;
             line-height: 30px
@@ -153,12 +170,12 @@
         transform: translateY(-32px);
         transition: transform linear;
         will-change: transform;
-        opacity: 1;
-        visibility: visible;
-        width: 100%;
         z-index: 1;
+        display: none;
+
 
         @include media-breakpoint-up(lg) {
+            display: block;
             top: 45%;
             left: 25%;
         }
@@ -166,6 +183,7 @@
     }
 
     &-calendar {
+        display: none;
         position: absolute;
         z-index: 0;
         width: 100%;
@@ -176,6 +194,12 @@
         opacity: 1;
         visibility: visible;
 
+        @include media-breakpoint-up(lg) {
+            top: 25%;
+            left: 78%;
+        }
+
+        z-index: 0;
     }
 
 }

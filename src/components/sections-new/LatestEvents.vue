@@ -10,7 +10,7 @@ defineProps({
             <div
                 class="col-12 d-flex flex-lg-row align-items-center align-items-start align-items-lg-center justify-content-lg-between mb-35px">
                 <div class="d-flex flex-column">
-                    <p class="sub-title sub-title-lprpl mb-17px">
+                    <p class="sub-title sub-title-lprpl  mb-17px">
                         <slot name="subtitle">Default subtitle</slot>
                     </p>
                     <h3 class="title-1 mb-17px mb-lg-0">
