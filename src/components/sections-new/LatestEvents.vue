@@ -21,7 +21,7 @@ defineProps({
                     View All
                 </a>
             </div>
-            <div class="ev-cont">
+            <div class="ev-cont" v-bind="$attrs">
                 <!-- Loop through the `latest` array and render an event for each entry -->
                 <div v-for="event in latest" :key="event.id" class="event-item">
                     <div class="relative">
@@ -72,6 +72,12 @@ defineProps({
 
     @include media-breakpoint-up(lg) {
         grid-template-columns: repeat(4, 1fr);
+
+    }
+    &-lg-three{
+        @include media-breakpoint-up(lg){
+            grid-template-columns: repeat(3,1fr);
+        }
 
     }
 }

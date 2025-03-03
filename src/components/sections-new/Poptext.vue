@@ -8,18 +8,13 @@ const props = defineProps({
     },
 });
 
-
-
-const splitText = computed(() => text.split(" "));
-
+const splitText = computed(() => props.text.split(" "));
 
 const wordTotal = computed(() => splitText.value.length);
 
-
-const charTotal = computed(() => text.length);
-
-
+const charTotal = computed(() => props.text.length);
 </script>
+
 
 <template>
     <h3 class="poptext" :style="`--word-total: ${wordTotal}; --char-total: ${charTotal};`">
@@ -27,7 +22,7 @@ const charTotal = computed(() => text.length);
             :style="`--word-index: ${wordIndex};`">
             <span v-for="(char, charIndex) in word.split('')" :key="charIndex" class="char" :data-char="char" :style="{
                 '--char-index': charIndex,
-                '--char-total': charTotal, // Use the total character count for the entire text
+                '--char-total': charTotal, 
             }">
                 {{ char }}
             </span>

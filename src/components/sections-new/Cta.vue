@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import Poptext from './Poptext.vue';
+import Poptext from '@/components/sections-new/Poptext.vue';
 
 const text = ref("Future Events");
 </script>

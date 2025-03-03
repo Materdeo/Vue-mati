@@ -141,7 +141,6 @@ const events = [
 </script>
 
 <template>
-  <Hero />
   <h1 class="pb-100px">ZMIEŃ WSZYSTKIE KLAS- na KLAS__ you mongrel, WIĘKSZE SPANY W ANIM TEXT</h1>
   <h3>todo jak wróce</h3>
   <Cta />
@@ -149,7 +148,7 @@ const events = [
     <template #subtitle>Insane Clown Posse</template>
     <template #title>Latest updates from the best band</template>
   </LatestEvents>
-
+test
   <CategoriesImg class="pt-70px pt-lg-120px pb-60px pb-lg-90px" />
   <section class="pb-75px">
     <div class="container flex-column align-items-center">
