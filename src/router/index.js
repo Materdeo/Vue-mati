@@ -4,6 +4,7 @@ import TestView from '../views/test.vue'
 import New from '@/views/New.vue'
 import Blog from '@/views/Blog.vue'
 import Single from '@/views/Single.vue'
+import Contact from '@/views/Contact.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -41,6 +42,9 @@ const router = createRouter({
       name: 'single',
       component:Single,
       
+      path: '/kontakt',
+      name: 'kontakt',
+      component: Contact,
     },
   ],
 })
