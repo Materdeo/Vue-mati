@@ -19,7 +19,7 @@ const category = [
     link: "/test",
   },
   {
-    name: "Orgies",
+    name: "Fun",
     source: "/dist/assets/images/feature_3.png",
     count: 3,
     link: "/test",
@@ -37,7 +37,7 @@ const category = [
     link: "/test",
   },
   {
-    name: "Orgies",
+    name: "Fun",
     source: "/dist/assets/images/feature_3.png",
     count: 5,
     link: "/test",
