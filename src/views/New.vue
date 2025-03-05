@@ -8,6 +8,7 @@ import Events from "@/components/sections-new/Events.vue";
 import LatestEvents from "@/components/sections-new/LatestEvents.vue";
 import Cta from "@/components/sections-new/Cta.vue";
 import TitleNSub from "@/components/sections-new/TitleNSub.vue";
+import Hero from "@/components/sections-new/Hero.vue";
 
 const team = [
 	{
@@ -148,6 +149,7 @@ const events = [
 	<h1 class="pb-100px">
 		ZMIEŃ WSZYSTKIE KLAS- na KLAS__ you mongrel, WIĘKSZE SPANY W ANIM TEXT
 	</h1>
+	<Hero />
 	<h3>todo jak wróce</h3>
 	<Cta />
 	<section class="pt-110px pb-100px">
